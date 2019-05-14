@@ -199,7 +199,7 @@ class SideMenu extends React.Component {
                 <small>10. Rosenblum, Petite Sirah </small>
               </p>
               <p style={listItemStyle}>
-                <small>11. Michael David, "Lust" </small>
+                <small>11. Michael David, " Lust " </small>
               </p>
             </div>
           </div>
