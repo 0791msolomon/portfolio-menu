@@ -7,7 +7,7 @@ function App() {
   return (
     <div style={{ width: "100%" }}>
       <div
-        className="parallax"
+        className="smallparallax"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -18,13 +18,13 @@ function App() {
         <div
           className="col-6"
           style={{
-            // backgroundColor: "black",
             alignSelf: "center",
             border: "solid 4px black",
             marginBottom: "3%"
           }}
         >
-          <h1
+          <div
+            className="display-4"
             style={{
               textAlign: "center",
               fontWeight: "bold",
@@ -33,7 +33,7 @@ function App() {
             }}
           >
             On Our Menu Today
-          </h1>
+          </div>
         </div>
       </div>
 
@@ -41,17 +41,17 @@ function App() {
         <div
           className="col-12"
           style={{
-            // height: "700px",
             width: "100%",
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap"
           }}
         >
-          <TabsDisplay /> <SideMenu />
+          <TabsDisplay />
+          <SideMenu />
         </div>
       </div>
-      <div className="parallax" />
+      <div className="smallparallax" />
     </div>
   );
 }

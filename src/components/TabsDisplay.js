@@ -1,60 +1,89 @@
 import React from "react";
 import "./index.css";
+import { connect } from "react-redux";
+import { changeMenu } from "../actions";
 class TabsDisplay extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      menu: "breakfast"
+    };
   }
+  changeMenu = menu => {
+    this.setState({ menu });
+    this.props.changeMenu(menu);
+  };
   render() {
     return (
       <div
-        className="container col-lg-8 col-sm-12"
-        style={{
-          marginTop: "3%",
-          // textAlign: "center",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "space-around"
-        }}
+        style={{ display: "flex", flexDirection: "column" }}
+        className="col-lg-8 col-sm-12"
       >
-        <div className="col-lg-3 col-sm-12  border-button">
-          <h1
-            style={{
-              fontFamily: "Snell Roundhand, cursive",
-              textAlign: "center",
-              color: "white"
-            }}
+        <div
+          // className="container col-lg-8 col-sm-12"
+          style={{
+            marginTop: "3%",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "space-around"
+          }}
+        >
+          <div
+            className="col-lg-3 col-sm-12  border-button"
+            onClick={() => this.changeMenu("breakfast")}
           >
-            Breakfast
-          </h1>
-        </div>
-        <div className="col-lg-3 col-sm-12  border-button">
-          <h1
-            style={{
-              fontFamily: "Snell Roundhand, cursive",
-              textAlign: "center",
-              color: "white"
-            }}
+            <h1
+              style={{
+                fontFamily: "Snell Roundhand, cursive",
+                textAlign: "center",
+                color: "white"
+              }}
+            >
+              {this.state.menu === "breakfast" ? <u>Breakfast</u> : "Breakfast"}
+            </h1>
+          </div>
+          <div
+            className="col-lg-3 col-sm-12  border-button"
+            onClick={() => this.changeMenu("lunch")}
           >
-            Lunch
-          </h1>
-        </div>
+            <h1
+              style={{
+                fontFamily: "Snell Roundhand, cursive",
+                textAlign: "center",
+                color: "white"
+              }}
+            >
+              {this.state.menu === "lunch" ? <u>Lunch</u> : "Lunch"}
+            </h1>
+          </div>
 
-        <div className="col-lg-3 col-sm-12  border-button">
-          <h1
-            style={{
-              fontFamily: "Snell Roundhand, cursive",
-              textAlign: "center",
-              color: "white"
-            }}
+          <div
+            className="col-lg-3 col-sm-12  border-button"
+            onClick={() => this.changeMenu("dinner")}
           >
-            Dinner
-          </h1>
+            <h1
+              style={{
+                fontFamily: "Snell Roundhand, cursive",
+                textAlign: "center",
+                color: "white"
+              }}
+            >
+              {this.state.menu === "dinner" ? <u>Dinner</u> : "Dinner"}
+            </h1>
+          </div>
         </div>
       </div>
     );
   }
 }
-export default TabsDisplay;
+const mapStateToProps = state => {
+  return {
+    dish: state.dish
+  };
+};
+export default connect(
+  mapStateToProps,
+  { changeMenu }
+)(TabsDisplay);
