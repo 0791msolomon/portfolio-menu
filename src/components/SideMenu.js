@@ -17,7 +17,7 @@ class SideMenu extends React.Component {
           height: "auto",
           marginTop: "3%",
           marginBottom: "3%",
-          height: "650px",
+          // height: "650px",
           border: "solid 2px white",
           display: "flex",
           flexDirection: "column"

@@ -19,8 +19,8 @@ function App() {
           className="col-6"
           style={{
             alignSelf: "center",
-            border: "solid 4px black",
-            marginBottom: "3%"
+            border: "solid 4px white"
+            // marginBottom: "3%"
           }}
         >
           <div
@@ -28,7 +28,7 @@ function App() {
             style={{
               textAlign: "center",
               fontWeight: "bold",
-              color: "black",
+              color: "white",
               fontFamily: "Snell Roundhand, cursive"
             }}
           >
@@ -37,7 +37,7 @@ function App() {
         </div>
       </div>
 
-      <div className="App col-12">
+      <div className="App col-12" style={{ display: "flex" }}>
         <div
           className="col-12"
           style={{

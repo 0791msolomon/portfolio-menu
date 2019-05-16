@@ -39,7 +39,7 @@ class TabsDisplay extends React.Component {
           </p>
           <p style={{ fontFamily: "Didot, serif	", fontSize: "15px" }}>
             {dish.description}
-            {`$${dish.price}`}
+            {`-${dish.price}`}
           </p>
         </li>
       );
