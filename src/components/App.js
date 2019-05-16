@@ -47,8 +47,15 @@ function App() {
             flexWrap: "wrap"
           }}
         >
-          <TabsDisplay />
-          <SideMenu />
+          <div className="col-lg-8 col-sm-12">
+            <TabsDisplay />
+          </div>
+          <div
+            className="col-lg-4 col-sm-12"
+            style={{ height: "auto", marginBottom: "3%" }}
+          >
+            <SideMenu />
+          </div>
         </div>
       </div>
       <div className="smallparallax" />

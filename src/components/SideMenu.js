@@ -10,9 +10,11 @@ class SideMenu extends React.Component {
   render() {
     return (
       <div
-        className="container col-lg-4 col-sm-12"
+        className="container col-12"
         style={{
-          overflow: "auto",
+          padding: "0%",
+          // overflow: "auto",
+          height: "auto",
           marginTop: "3%",
           marginBottom: "3%",
           height: "650px",
@@ -43,6 +45,7 @@ class SideMenu extends React.Component {
           <small>We pour 5 oz. of wine by the glass in a 12 oz. glass</small>
         </p>
         <div
+          className="col-12"
           style={{
             display: "flex",
             flexDirection: "row",
